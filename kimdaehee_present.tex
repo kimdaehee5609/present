@@ -1,0 +1,2470 @@
+
+%	-------------------------------------------------------------------------------
+%
+%			작성		
+%				2020년 
+%				10월 
+%				26일 
+%				월
+%
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%	\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%	\documentclass[10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[14pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+	\documentclass[aspectratio=1610,20pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=169,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=149,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=54,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=43,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=32,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+%			\setbeamersize{text margin left=2mm}
+%			\setbeamersize{text margin right=2mm}
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+
+%			% Format presentation size to A4
+%			\usepackage[size=a4]{beamerposter}		% A4용지 크기 사용
+			\geometry{paper=a5paper}
+%			% Format presentation size to A4 길게
+%			\geometry{paper=a4paper, landscape}
+
+			\setbeamersize{text margin left=10mm}
+			\setbeamersize{text margin right=10mm}
+
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+		\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+		\usepackage{color}					%
+		\usepackage{colortbl}					%
+
+		\usepackage{caption}		% 테이블 사용 건 2020.10.22
+		\usepackage{tabularx} 	% 테이블 사용 건 2020.10.22
+
+
+	%		========================================================= 	note 옵션인 
+	%			\setbeameroption{show only notes}
+		
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+%			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}			% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+		% --------------------------------- 	문서 기본 사항 설정
+		\setcounter{secnumdepth}{3} 		% 문단 번호 깊이
+		\setcounter{tocdepth}{3} 			% 문단 번호 깊이
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{ 현황 정리 }
+			\author{ 김대희 }
+			\date{ 
+					2020년 
+					12월 
+					26일
+					토  
+					} 
+
+
+% -----------------------------------------------------------------------------
+%		개정 내용
+% -----------------------------------------------------------------------------
+%
+%		2020년 10월 7일 첫제작
+%		2020년 10월 12일 서영 엔지니어링 추가
+%		2020년 10월 15일 문수선원 추가 
+%		2020년 10월 21일 반야선원 추가 
+%		2020년 10월 26일 수채화 추가
+%		2020년 10월 28일 위생 추가
+%		2020년 11월 02일 청파팀 계좌번호 추가 
+%		2020년 12월 13일 지오알엔디 추가
+%		2020년 12월 16일 보현명상산악회 추가
+%		2020년 12월 19일 위생 수정
+%		2020년 12월 21일 월 	USB 정리
+%		2020년 12월 25일 금	설치 프로그램
+%		2020년 12월 26일 토	물품 구입
+%
+%
+%
+%
+
+
+	%	==========================================================
+	%
+	%	---------------------------------------------------------- 1	page
+
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 2	page
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+
+			\setlength{\leftmargini}{ 2em}			
+			\begin{itemize}
+
+				\item [part1] \ref{part1}	차 시간 정리
+				\item [part2] \ref{part2}	연락처
+				\item [part3] \ref{part3}	기타현황
+				\item [part4] \ref{part4}	좋은 문구
+%				\item [part5] \ref{part5}	출입문			
+%				\item [part6] \ref{part6}	일반사이트		
+%				\item [part7] \ref{part7}	쇼핑 사이트		
+
+			\end{itemize}
+
+
+
+		\end{frame}
+
+	%	---------------------------------------------------------- 3	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 4	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+
+	%	========================================================== 조직
+		\part{차 시간 정리 }
+		\frame{\partpage}
+
+\label{part1} 	%  차 시간 정리
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+		
+		\begin{frame} [plain]
+		\end{frame}
+
+	%	---------------------------------------------------------- 출퇴근
+	%		Frame
+	%	----------------------------------------------------------
+		\section{출퇴근}
+
+
+		\begin{frame} [t,plain]
+		\frametitle{출퇴근}
+
+			\begin{block} {출근}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		   \begin{center}
+%			\captionof{table}{Test}
+			\label{table:second}
+			\setlength{\tabcolsep}{2pt}
+			\small
+		     	\begin{tabular}{ c |c|c|c|c|c} \hline
+				번호  	& 초량 		& 	부전  	& 교대 		& 오시 		&비고  \\ 
+					  	& 	 		& 		  	& 	 		& 리아 		&	  \\ \hline  \hline
+				1  		& 	05:28	&	5:30		&	5:37		&	6:00		&  \\ \hline
+				2  		& 	05:44	&	5:50		&	5:57		&	6:20		&  \\ \hline
+				3  		& 	05:58	&	6:10		&	6:17		&	6:40		&  \\ \hline
+				4  		& 	06:10	&	6:25		&	6:32		&	6:55		&  \\ \hline
+				5  		& 	06:22	&	6:39		&	6:46		&	7:09		&  \\ \hline
+				6  		& 	06:34	&	6:54		&	7:01		&	7:24		&  \\ \hline
+				7  		& 	06:46	&	7:09		&	7:16		&	7:39		&  \\ \hline
+				8  		& 	06:58	&	7:27		&	7:34		&	7:57		&  \\ \hline
+				9  		& 	07:09	&	7:48		&	7:55		&	8:18		&  \\ \hline
+				10  		& 			&			&	8:05		&	8:30		&  \\ \hline
+				11  		& 			&			&	8:20		&	8:43		&  \\ \hline
+				12  		& 			&			&	8:35		&	8:58		&  \\ \hline
+			\end{tabular}
+			\end{center}%
+
+
+
+		\end{frame}						
+
+
+		\begin{frame} [t,plain]
+		\frametitle{퇴근}
+
+			\begin{block} {퇴근}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		   \begin{center}
+%			\captionof{table}{Test}
+			\label{table:second}
+			\setlength{\tabcolsep}{2pt}
+			\small
+		     	\begin{tabular}{ c |c|c|c|c|c|c} \hline
+				번호  	& 오시		& 	교 대  	& 거 제 			& 거제 		&부전	& 비고 \\ 
+					  	& 리아		& 	  		&  				& 해맞이 	&		\\ \hline \hline
+																						
+				1  		& 	18:12	&	18:40	&	18:42		&	18:44		&  \\ \hline
+				2  		& 	18:38	&	19:02	&	19:03		&	19:05		&  \\ \hline
+				3  		& 	19:02	&	19:26	&	19:27		&	19:29		&  \\ \hline
+				4  		& 	19:17	&	19:41	&	19:42		&	19:44		&  \\ \hline
+				5  		& 	19:30	&	19:57	&	19:59		&	20:01		&  \\ \hline
+				6  		& 	19:50	&	20:14	&	20:15		&	20:17		&  \\ \hline
+				7  		& 	20:04	&	20:28	&	20:29		&	20:31		&  \\ \hline
+				8  		& 	20:21	&	20:45	&	20:46		&	21:48		&  \\ \hline
+				9  		& 	20:39	&	21:03	&	21:04		&	21:06		&  \\ \hline
+				10  		& 	20:58	&	21:22	&	21:23		&	21:25		&  \\ \hline
+			\end{tabular}
+			\end{center}%
+
+				7:08 교대역 \hrulefill \\
+
+				7:27 초량역 \hrulefill \\
+				17분 소요 \hrulefill \\
+
+
+
+		\end{frame}						
+
+
+		
+	%	---------------------------------------------------------- 철도
+	%		Frame
+	%	----------------------------------------------------------
+		\section{철도}
+
+
+	%	----------------------------------------------------------
+		\begin{frame} [t,plain]
+		\frametitle{철도}
+
+			\begin{block} {철도 : 부전 방향 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		   \begin{center}
+%			\captionof{table}{Test}
+			\label{table:second}
+			\setlength{\tabcolsep}{2pt}
+
+%			\small {
+			\footnotesize {
+%			\tiny {
+
+		     	\begin{tabularx}{\textwidth}{ 	m{0.12\textwidth} 	%1
+										m{0.12\textwidth} 	%2
+										m{0.12\textwidth}  	%3
+										m{0.12\textwidth}  	%4
+										m{0.12\textwidth}  	%5
+										m{0.12\textwidth}  	%6
+										m{0.12\textwidth}  	%7
+										m{0.12\textwidth}    	%8
+										}\hline
+
+%		     	\begin{tabular}{ c |c|c|c|c|c} \hline
+				번호  	& 남창		& 신  		& 센텀 			& 부전 		&비고	\\ 
+					  	& 			& 해운대	  	&  				& 	 		&		\\ \hline \hline
+
+					  	& 			& 	35분		& 7분 			& 10분	 	& 52분		\\ \hline \hline
+																						
+				1761	& 	07:31	&	08:06	&	08:13		&	08:23		&  \\ \hline
+				1773	& 	09:39	&	10:21	&				&	10:35		&  \\ \hline
+				1775	& 	10:41	&	11:18	&	11:26		&	11:36		&  \\ \hline
+
+				1777	& 			&	12:14	&				&	11:36		&  \\ \hline
+
+				1779	& 	12:45	&	13:21	&	13:29		&	13:39		&  \\ \hline
+				1781	& 	13:49	&	14:23	&				&	14:38		&  \\ \hline
+
+				1621	& 	14:26	&	15:03	&	15:10		&	15:20		&  \\ \hline
+				1783	& 	16:05	&	16:44	&				&	16:59		&  \\ \hline
+
+				1943	& 	\textbf{17:48}	&	18:24	&	18:32		&	18:44			&  \\ \hline
+				1787	& 	19:05	&	19:42	&	19:49		&	19:59		&  \\ \hline
+				1681	& 	22:34	&	23:12	&	23:19		&	23:29		&  \\ \hline
+
+				1791	& 	21:30	&	22:09	&	22:17		&	22:27		&  \\ \hline
+				1793	& 	22:14	&	22:47	&				&	23:02		&  \\ \hline
+				1681	& 	22:34	&			&	23:19		&	23:39		&  \\ \hline
+				1795	& 	23:37	&	00:13	&	00:20		&	00:30		&  \\ \hline
+			\end{tabularx}
+			}			
+			\end{center}%
+
+
+		\end{frame}						
+
+
+	%	----------------------------------------------------------
+		\begin{frame} [t,plain]
+		\frametitle{철도}
+
+			\begin{block} {철도 : 남창 방향 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		   \begin{center}
+%			\captionof{table}{Test}
+			\label{table:second}
+			\setlength{\tabcolsep}{2pt}
+
+%			\small {
+			\footnotesize {
+%			\tiny {
+
+%		     	\begin{tabular}{ c |c|c|c|c|c} \hline
+%		     	\begin{tabularx}{\textwidth}{ 	p{0.12\textwidth} 	%1
+%										p{0.12\textwidth} 	%2
+%										p{0.12\textwidth}  	%3
+%										p{0.12\textwidth}  	%4
+%										p{0.12\textwidth}  	%5
+%										p{0.12\textwidth}  	%6
+%										p{0.12\textwidth}  	%7
+%										p{0.12\textwidth}    	%8
+%										}\hline
+
+		     	\begin{tabularx}{\textwidth}{ 	m{0.12\textwidth} 	%1
+										m{0.12\textwidth} 	%2
+										m{0.12\textwidth}  	%3
+										m{0.12\textwidth}  	%4
+										m{0.12\textwidth}  	%5
+										m{0.12\textwidth}  	%6
+										m{0.12\textwidth}  	%7
+										m{0.12\textwidth}    	%8
+										}\hline
+
+				번호  	& 부전		& 센텀  		& 신			& 기장	& 좌천		& 남창	 		&비고	\\ 
+					  	& 			&			& 해운대	  	&		&			& 				&			\\ \hline \hline
+																						
+					  	& 			&11			& 8	 	 	&11		&10			&13 				&			\\ 
+					  	& 			&11			& 19	 	 	&30		&40			&53 				&			\\ \hline \hline
+
+				1774	&	6:30		&	6:14	&	6:22	&	6:33	&	6:43	&	6:56	&	\\ \hline					
+				\textbf{1622}	&	7:23		&	7:34	&	7:41	&	7:52	&	8:02	&	8:15	&	\\ \hline					
+				1776	&	7:45		&	7:56	&	8:03	&	8:14	&	8:24	&	8:40	&	\\ \hline					
+				1682	&	9:10		&	9:21	&	9:28	&	9:39	&	9:49	&	10:04	&	\\ \hline					
+				1944	&	9:46		&	9:57	&	10:04	&	10:15	&	10:25	&	10:42	&	\\ \hline					
+				1780	&	11:33	&	11:45	&	11:53	&	12:03	&	12:13	&	12:26	&	\\ \hline					
+				1782	&	13:00	&	-	&	13:16	&	13:27	&	-	&	-	&	\\ \hline					
+				1784	&	13:54	&	14:05	&	14:12	&	14:23	&	14:34	&	14:50	&	\\ \hline					
+				1888	&	15:35	&	15:46	&	15:53	&	16:04	&	16:15	&	16:29	&	\\ \hline					
+				1790	&	16:37	&	-	&	16:53	&	17:04	&	17:15	&	-	&	\\ \hline					
+				1792	&	17:35	&	17:46	&	17:54	&	18:05	&	18:16	&	18:32	&	\\ \hline					
+				1762	&	19:05	&	19:16	&	19:23	&	19:34	&	19:44	&	20:00	&	\\ \hline					
+				1794	&	20:14	&	20:25	&	20:33	&	20:43	&	20:53	&	21:07	&	\\ \hline					
+				1796	&	21:03	&	-	&	21:19	&	21:29	&	21:40	&	21:55	&	\\ \hline					
+			\end{tabularx}
+			}
+			\end{center}%
+
+
+		\end{frame}						
+
+	%	----------------------------------------------------------
+		\begin{frame} [t,plain]
+		\frametitle{철도}
+
+			\begin{block} {철도}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item  	무궁화호 1776호 
+				\item 	부전 7:45 출발
+				\item 	남창 8:40 도착
+				\item 	남창 택시 052) 238 - 3129 
+			\end{itemize}
+			\end{block}						
+
+
+			\begin{block} {동해 남부선 복선 전철}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item  	
+				\item 	
+				\item 	
+			\end{itemize}
+			\end{block}						
+
+
+		\end{frame}						
+
+	%	----------------------------------------------------------
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 출근시간표}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{출근시간표}
+		\begin{frame} [t,plain]
+		\frametitle{출근시간표}
+			\begin{block} {출근시간표}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}				
+
+		   \begin{center}
+%			\captionof{table}{출근시간표}
+			\label{table:second}
+			\setlength{\tabcolsep}{2pt}
+			\small
+		     	\begin{tabular}{ c |c|c|c|c|c} \hline
+				번호  	& 초량		& 교대  		&교대		& 오시리아 		&비고	\\ 
+					  	& 			&			& 		  	&  				&			\\ \hline \hline
+																						
+				1		& 	6:22		&	6:41		&	6:46		&	7:09		&  \\ \hline
+				2		& 	6:34		&	6:53		&	7:01		&	7:24		&  \\ \hline
+				3		& 	6:46		&	7:05		&	7:16		&	7:39		&  \\ \hline
+				4		& 	6:58		&	7:17		&	7:34		&	7:57		&  \\ \hline
+
+			\end{tabular}
+			\end{center}%
+
+				집  			\hrulefill 7:40 \hrulefill출발 \\
+				초량역 		\hrulefill 7:49 \hrulefill출발 \\
+				교대역		\hrulefill 8:08 \hrulefill도착 \\
+				교대역 		\hrulefill 8:20 \hrulefill출발 \\
+				오시리아역 	\hrulefill 8:43 \hrulefill도착 \\
+				동부산TG	\hrulefill 9:00 \hrulefill출발 \\
+
+		
+		\end{frame}						
+
+
+
+
+
+
+	%	---------------------------------------------------------- 퇴근 시간표}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{퇴근 시간표}
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} {퇴근 시간표}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item  	평일\\
+						18:38	 오시리아 출발 \\
+						19:02	 교대 도착  \\
+						19:08	 교대 출발  \\
+						19:27	 초량 도착 19분  \\
+				\item 	15:03 \\
+						15:31 \\
+						16:02 \\
+						16:29 \\
+
+				\item  	금요일\\
+						16:29	 오시리아 출발 \\
+						16:57	 교대 도착  28분 소요 \\
+						17:04	 교대 출발  \\
+						17:23	 초량 도착  \\
+				\item 	17:01 \\
+						17:32 \\
+						17:54 \\
+
+			\end{itemize}
+			\end{block}				
+
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 버스 시간표}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{버스 시간표}
+		\begin{frame} [t,plain]
+		\frametitle{버스 시간표}
+
+%			\begin{block} {버스 시간표}
+%			\setlength{\leftmargini}{2em}			
+%			\end{block}						
+
+			\begin{block} {내리 16058 당사입구방면 }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item \textbf{38} 	\hfill 	청강리 - 황령터널 - 민주공원
+				\item 39  			\hfill 	교리 - 부경대 - 용호동
+				\item \textbf{40} 	\hfill 	청강리 - 경성대 - 구덕운동장
+				\item 63 			\hfill 	청강리 - 양정 - 진구청
+				\item 182 			\hfill 	장산역 - 일광 - 정관
+				\item 185 			\hfill 	장산역 - 송정 - 청강리 
+				\item 200			\hfill 	청강리 - 동래역 - 북구청
+			\end{itemize}
+			\end{block}						
+
+			\begin{block} {해운대 반야 선원}
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 좌동재래시장입구 		\hfill	185
+				\item 좌동재래시장입구 		\hfill	182
+				\item 장산역 해운대 문화회관 	\hfill	38
+				\item 부흥등학교 			\hfill	 39
+				\item 삼정코아아파트 			\hfill 	200
+				\item 부흥고,해운대백병원 	\hfill 	40
+			\end{itemize}
+			\end{block}						
+
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 지하철 시간표}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{지하철 시간표}
+		\begin{frame} [t,plain]
+		\frametitle{}
+
+			\begin{block} {지하철 시간표}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item  장산 - 서면 : 18개역 34분
+				\item  서면 - 초량 : 5개역 9분
+				\item 
+			\end{itemize}
+			\end{block}						
+
+
+		   \begin{center}
+%			\captionof{table}{출근시간표}
+			\label{table:second}
+			\setlength{\tabcolsep}{0pt}
+
+
+%			\small {
+			\footnotesize {
+%			\tiny {
+
+%		     	\begin{tabularx}{\textwidth}{ l | l | r |r  }\hline
+		     	\begin{tabularx}{\textwidth}{ 		b{0.17\textwidth} 
+											b{0.17\textwidth} 
+											b{0.17\textwidth} 
+											b{0.17\textwidth} 
+											b{0.17\textwidth} 
+											b{0.15\textwidth} 
+									}\hline
+
+				번호   	& 장산역	& 서면  		&서면 		& 초량	&비고			\\ \hline				\hline				
+					   	& 		& 34분 		&		 	& 9분	&				\\ \hline				\hline				
+
+				1   		& 20:00	& 20:33  		&	20:44 	& 20:54		&			\\ \hline
+				2   		& 20:06	& 20:39  		&	20:52 	& 21:02		&			\\ \hline
+				3   		& 20:12	& 20:45  		&	21:00 	& 21:10		&			\\ \hline
+				4   		& 20:18	& 20:51  		&	21:08 	& 21:18		&			\\ \hline
+				5   		& 20:24	& 20:57  		&	21:16 	& 21:26		&			\\ \hline
+			\end{tabularx}
+			}
+			\end{center}%					
+
+
+			\begin{block} {지하철 시간표}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item  7:08 교대역
+				\item  7:27 초량 도착
+				\item  17분 소요 
+			\end{itemize}
+			\end{block}						
+
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 차량 시간표}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{차량 시간표}
+		\begin{frame} [t,plain]
+		\frametitle{차량 시간표}
+			\begin{block} {차량 시간표}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 24.1 km
+				\item  38분
+				\item 온양IC
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 3	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 4	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+	%	========================================================== 연락처
+	%	
+	%	
+	%	
+	%	---------------------------------------------------------- 1	page
+		\part{연락처}
+		\frame{\partpage}
+
+\label{part2} 	% 연락처
+
+		
+	%	---------------------------------------------------------- 2	page
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 3	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 4	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 청출
+	%		Frame
+	%	---------------------------------------------------------- 	page	1
+		\section{청출 051)504-5658}
+		\begin{frame} [t,plain]
+		\frametitle{청출}
+			\begin{block} {청출 051)504-5658}
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 박일
+				\item 오동재
+				\item 심경환
+				\item 강민재
+				\item 김민자
+				\item 홍성화
+				\item 송윤석
+				\item 이상홍
+				\item 
+			\end{itemize}
+			\end{block}			
+
+								
+		\end{frame}						
+	
+
+	%	---------------------------------------------------------- 지오알엔디
+	%		Frame
+	%	---------------------------------------------------------- 	page	2
+		\section{지오알엔디 }
+		\begin{frame} [t,plain]
+		\frametitle{지오알엔디}
+			\begin{block} {지오알엔디 051) 515 - 0138 }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 박이근
+				\item 김향은 부장
+				\item 퍼스트 인셈텀 906호
+				\item 2호선 센텀시티역 하차 4번 출구 도로5분
+				\item 용송정밀 \\한림면 안하리 1110-3번지
+				\item 버스 : 181 송정2단지 주공 승차 SK텔레콤 하차
+				\item 
+			\end{itemize}
+			\end{block}			
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	3
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+	%	---------------------------------------------------------- 초량 집
+	%		Frame
+	%	---------------------------------------------------------- 	page	1
+		\section{초량 집}
+
+		\begin{frame} [t,plain]
+		\frametitle{초량 집 - 주소 }
+			\begin{block} {초량 집 - 주소 }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 	48798
+				\item 	부산시동구 중앙대로 251번길 28 (초량동)
+				\item 	W3W \hrulefill ///시선, 필요한, 색칠 
+			\end{itemize}
+			\end{block}			
+		\end{frame}						
+								
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [t,plain]
+		\frametitle{초량 집 - 구성원 }
+			\begin{block} {초량 집 - 구성원}
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 	김 대희 \hrulefill		   3839-5609 \\
+						65 09 24 을사 (뱀) 57
+
+				\item 	안 신영 \hrulefill		   9919-5609  \\
+						69 08 16  기유 (닭) 53
+
+				\item 	김 재민 \hrulefill		   2871-5609 \\
+						96 05 12 병자 (쥐) 26
+
+				\item 	김 재경 \hrulefill		   9805-5609 \\
+						98 05 21 무인 (호랑이) 24
+
+				\item 	김 재홍 \hrulefill		   9988-5609 \\
+						02 11 02 임오 (말) 20
+
+				\item 	조 경연 \hrulefill		   8917-5619 \\
+						41 01 04 신사 (뱀) 81
+
+				\item 	전 삼연 \hrulefill		    6654-1384 \\
+			\end{itemize}
+			\end{block}			
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 	page	3
+		\begin{frame} [t,plain]
+		\frametitle{초량 집}
+			\begin{block} {녹산}
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 송정동 서삼종 01  6777 1282 
+
+			\end{itemize}
+			\end{block}			
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 울산지사 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{울산지사 }
+
+	%	---------------------------------------------------------- 1 page
+		\begin{frame} [t,plain]
+		\frametitle{울산지사 }
+
+			\begin{block} {울산지사 : 비번 3366 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 44971
+				\item 울산광역시 울주군 온양읍 광정로 796-66 \\
+			\end{itemize}
+
+			\begin{itemize}
+				\item ARS \hrulefill 052) 701 -  6200 
+				\item 상황실  \hrulefill 052) 701 -  6271
+				\item 상황실  \hrulefill 052) 701 -  6272
+			\end{itemize}
+
+			\begin{itemize}
+				\item fax 고객지원팀 \hrulefill 052) 701 -  6297
+				\item fax 도로안전팀 \hrulefill 052) 701 -  6298
+				\item fax 상황실 \hrulefill 052) 701 -  6299
+			\end{itemize}
+
+			\begin{itemize}
+				\item 지사장 \hrulefill 박태완
+				\item 고객지원팀장 \hrulefill 윤남구
+				\item 도로안전팀장 \hrulefill 손정줄
+				\item 교통안전팀장 \hrulefill 하규영
+			\end{itemize}
+			\end{block}						
+
+
+
+
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 2 page
+		\begin{frame} [t,plain]
+		\frametitle{울산지사 : 고객지원팀 }
+
+			\begin{block} {울산지사 : 고객지원팀 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 운남규 팀장 	\hrulefill  8806 5700
+				\item 이충열 관리차장 \hrulefill 3547 3867
+				\item 남기환	영업차장	\hrulefill 3738 0270
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 3 page
+		\begin{frame} [t,plain]
+		\frametitle{울산지사 : 도로안전팀 }
+
+			\begin{block} {울산지사 : 도로안전팀 }
+			\setlength{\leftmargini}{2em}			
+%			\begin{itemize}
+%				\item 
+%				\item 
+%			\end{itemize}
+			\end{block}	
+
+		   \begin{center}
+%			\captionof{table}{출근시간표}
+			\label{table:second}
+			\setlength{\tabcolsep}{0pt}
+
+%			\small {
+			\footnotesize {
+%			\tiny {
+
+%		     	\begin{tabularx}{\textwidth}{ l | l | r |r  }\hline
+		     	\begin{tabularx}{\textwidth}{ p{0.18\textwidth} p{0.22\textwidth} p{0.4\textwidth} p{0.2\textwidth}   }\hline
+
+				성명   	& 직책		& 전번  		&비고			\\ \hline				\hline				
+				손정줄	&	팀장	&	010 - 6312 - 8506 	&		  \\ \hline				
+				조재성	&	차장	&	010 - 7745 - 9290	&		 \\ \hline				
+				장호진	&	차장대우	&	010 - 8541 - 0167	&	시설물	 \\ \hline				\hline				
+				한재승	&	과장	&	010 - 4847 - 0785	&	설비	 \\ \hline				
+				박자민	&	과장	&	010 - 3098 - 0015	&	품질	 \\ \hline				
+				이영주	&	과장 대우	&	010 - 2004 - 5076	&	전기	 \\ \hline				\hline				
+				김병우	&	대리	&	010 - 9084 - 2299	&	상황	 \\ \hline				
+				고아현	&	대리	&	010 - 3371 - 5914	&	조경	 \\ \hline				
+				이효찬	&	대리	&	010 - 5349 - 5347	&	구조물	 \\ \hline				\hline				
+				이병근	&	대리	&	010 - 4895 - 8985	&	공구장	 \\ \hline				
+				권영일	&	대리	&	010 - 4160 - 0042	&	공구장	 \\ \hline				\hline				
+				김태건	&	선임	&	010 - 9808 - 8653	&	구조물	 \\ \hline				
+				김형일	&	선임	&	010 - 3077 - 4984	&		 \\ \hline				
+				한우덕	&	선임	&	010 - 3737 - 9096	&		 \\ \hline				
+				손동영	&	선임	&	010 - 3144 - 7119	&	구조물	 \\ \hline				\hline				
+				권동우	&	사원	&	010 - 8735 - 1397	&		 \\ \hline				
+				한승훈	&	사원	&	010 - 4746 - 4434	&		 \\ \hline				
+				이상희	&	사원	&	010 - 2399 - 9635	&		 \\ \hline				
+				임기식	&	사원	&	010 - 3434 - 9635	&		 \\ \hline				
+				이원빈	&	사원	&		&		 \\ \hline				\hline				
+
+			\end{tabularx}
+			}
+			\end{center}%					
+
+
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 4 page
+		\begin{frame} [t,plain]
+		\frametitle{울산지사 : 교통안전팀 }
+
+			\begin{block} {울산지사 : 교통안전팀 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		   \begin{center}
+%			\captionof{table}{교통안전팀}
+			\label{table:second}
+			\setlength{\tabcolsep}{0pt}
+
+%			\small {
+%			\footnotesize {
+			\tiny {
+		     	\begin{tabularx}{\textwidth}{ p{0.18\textwidth} p{0.22\textwidth} p{0.4\textwidth} p{0.2\textwidth}   }\hline
+				성명   	& 직책		& 전번  		&비고			\\ \hline				\hline				
+
+				하규영	&	팀장			&	010 - 9145 - 5246	&		 \\ \hline		
+				김중모	&	과장			&	010 - 4772 - 7719	&	교통 장비	 \\ \hline		
+				최주학	&	과장			&	010 - 9397 - 3817	&	정보통신	 \\ \hline		
+				정경진	&	과장대우		&	010 - 3567 - 2776	&		 \\ \hline	\hline		
+
+				박성철	&	대리	&		&	운전	 \\ \hline		
+				류정훈	&	대리	&		&	운전	 \\ \hline		
+				박종철	&	대리	&		&		 \\ \hline		
+				김회용	&	대리	&		&		 \\ \hline		
+				김성인	&	대리	&		&	교통상황	 \\ \hline  \hline		
+				엄성섭	&	선임	&		&		 \\ \hline		
+				김승규	&	선임	&		&		 \\ \hline		
+				김중기	&	선임	&		&		 \\ \hline		
+				안상율	&	주임	&		&		 \\ \hline	  \hline			
+													
+				하점규	&	사원	&		&	주관상황관리	 \\ \hline		
+				김학권	&	사원	&		&	순찰직	 \\ \hline		
+				박성호	&	사원	&		&		 \\ \hline		
+				김인석	&	사원	&		&	안전순찰	 \\ \hline		
+				문정환	&	사원	&		&		 \\ \hline		
+				김홍태	&	사원	&		&	안전순찰	 \\ \hline		
+				이태양	&	사원	&		&		 \\ \hline		
+				김성재	&	사원	&		&	안전순찰	 \\ \hline		
+				박주렬	&	사원	&		&	안전순찰	 \\ \hline		
+				최재덕	&	사원	&		&	안전순찰	 \\ \hline		
+				최황원	&	사원	&		&	안전순찰	 \\ \hline		
+				진명훈	&	사원	&		&	안전순찰	 \\ \hline		
+				류용철	&	사원	&		&		 \\ \hline		
+				유병열	&	사원	&		&	안전순찰	 \\ \hline		
+				조경성	&	사원	&		&	안전순찰	 \\ \hline		
+				김경민	&	사원	&		&	안전순찰	 \\ \hline		
+				방우섭	&	사원	&		&	안전순찰	 \\ \hline		
+				박영근	&	사원	&		&	안전순찰	 \\ \hline		
+
+
+			\end{tabularx}
+}
+			\end{center}%					
+
+
+
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 능인회 }
+	%		Frame
+	%	----------------------------------------------------------  page	1
+		\section{능인회 }
+		\begin{frame} [t,plain]
+		\frametitle{능인회 }
+
+			\begin{block} {능인회 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 월 : 정일현 : 01월 \hrulefill
+				\item 화 : 여종한 : \hrulefill 11월
+				\item 수 : 조승희 : \hrulefill 02월
+				\item 목 : 조현진 : \hrulefill 03월
+				\item 금 : 전대성 : \hrulefill 12월
+				\item 양도근 : \hrulefill 10월
+
+			\end{itemize}
+			\end{block}	
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 반야선원}
+	%		Frame
+	%	----------------------------------------------------------  page	2
+		\section{반야선원 }
+		\begin{frame} [t,plain]
+		\frametitle{반야선원 }
+
+			\begin{block} {반야선원}
+
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 48106 \hrulefill
+				\item 부산광역시 해운대구 세실로87
+				\item 영진파스타8층 \hrulefill
+				\item 반야선원 \hrulefill
+				\item 허공 스님 \hrulefill
+				\item 010 - 3732 - 3383 \hrulefill
+				\item 효담 스님 \hrulefill
+				\item 010 - 4215 - 9119 \hrulefill
+
+			\end{itemize}
+			\end{block}						
+				
+
+			\begin{block} {반야선원 : 비밀번호 }
+
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 9004*
+				\item 9009*
+				\item 23680 출입문 번호키
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 문수선원
+	%		Frame
+	%	----------------------------------------------------------  page	3
+		\section{문수선원 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} {문수선원 : 여천 무비 스님 }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item \hrulefill	문수 경전 연구회 		
+						\\ 첫째주 월요일 오후 3시-6시
+				\item \hrulefill	금요법회 				
+						\\	금요일 10시 30분
+						\\ 1주 화엄경 강좌
+						\\ 2주 참선
+						\\ 3주 화엄경 강좌
+						\\ 4주 법화경 사경
+				\item \hrulefill	문수불교대학원			
+						\\ 수요일 10시, 오후 7시
+				\item \hrulefill	문수 사경반				
+						\\ 금요일 오후 1시
+				\item \hrulefill 친불회 					
+						\\ 월요일 오전 10시
+				\item \hrulefill 염화실
+			\end{itemize}
+			\end{block}						
+
+
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 여래선원
+	%		Frame
+	%	----------------------------------------------------------  page	4
+		\section{여래선원 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} {여래선원 : 효산 스님 }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 여여선원 선원장 정여 스님
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 붓다선원
+	%		Frame
+	%	----------------------------------------------------------  page	5
+		\section{붓다선원 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} {붓다선원 : 도경  스님 }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 문자 010 6257 1150
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	----------------------------------------------------------  page	6
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	----------------------------------------------------------  page	7
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	----------------------------------------------------------  page	8
+		\begin{frame} [t,plain]
+		\end{frame}						
+			
+
+	%	---------------------------------------------------------- 포교사단 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{포교사단 }
+
+	%	----------------------------------------------------------  page	1
+		\begin{frame} [t,plain]
+		\frametitle{포교사단 }
+
+			\begin{block} {포교사단  : 051) 633-3011 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 사단장 :  자재천 정분남
+				\item 사무국장 :  손삼호  \\ jeamho son353535
+				\item 간사 : 이원희 간사 010 9338 4658
+				\item 교육부장 :  법인 김병인 \\ 
+			\end{itemize}
+			\end{block}						
+
+
+		\end{frame}						
+
+
+	%	----------------------------------------------------------  page	2
+		\begin{frame} [t,plain]
+		\frametitle{포교사단 }
+
+			\begin{block} {포교사단  : 051) 633-3011 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 중부지역
+				\item 중동부 지역
+				\item 동부 지역
+				\item 서부 지역
+				\item 남부 지역
+				\item 지역중앙
+				\item NGO사단본부
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	----------------------------------------------------------  page		3
+		\begin{frame} [t,plain]
+		\frametitle{포교사단 }
+			\begin{block} {포교사증  : A3-64-0048}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 자격번호 : A3-64-0048
+				\item 성명 : 김대희(보조)
+				\item 생년월일 : 1965.09.24.
+
+				\item 자격취득일 : 2020.10.08.
+				\item 갱신일 : 2025.10.07.
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+	%	---------------------------------------------------------- 포교사단 청파팀 }
+	%		Frame
+	%	---------------------------------------------------------- 	page	5
+		\section{포교사단팀 청파팀 }
+		\begin{frame} [t,plain]
+		\frametitle{포교사단팀 청파팀 }
+			\begin{block} {포교사단팀 청파팀 (군포교)}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 서부지역 총괄팀 
+				\item 18 김영식 010 5311 7744
+				\item 010 8949 3468
+				\item 17 월인 김필근 
+				\item 도선 고영옥 \\2020.12.15 공인중개사 합격
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 포교사단 청파팀 경덕회 }
+	%		Frame
+	%	---------------------------------------------------------- 	page	6
+		\begin{frame} [t,plain]
+			\begin{block} {포교사단팀 청파팀 경덕회 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 3명
+				\item 매월 1인당 50,000원 보시
+				\item 구경옥
+				\item 김혜영
+				\item 이연교
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 포교사단 청파팀 법은회 }
+	%		Frame
+	%	---------------------------------------------------------- 	page	7
+		\begin{frame} [t,plain]
+			\begin{block} {포교사단팀 청파팀 법은회 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 매월 첫주에 봉사하는 지원 단체
+				\item 
+				\item 
+				\item 
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	8
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 범포회}
+	%		Frame
+	%	---------------------------------------------------------- 	page	1
+		\section{범포회}
+		\begin{frame} [t,plain]
+		\frametitle{범포회}
+			\begin{block} {범포회}
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 14기 경행 최우영 (48표) 금정팀
+				\item 18기 염제 강창식 (39표) 동산팀
+				\item 19기 상명심 김현이
+				\item 20기 법인 김병인
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 금정불교대학}
+	%		Frame
+	%	---------------------------------------------------------- 	
+		\section{금정불교대학}
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [t,plain]
+		\frametitle{금정불교대학}
+
+			\begin{block} {금정불교대학}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+
+			\begin{block} {여래사 불교대학}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 학장 원범스님
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 금정불교대학 동문회
+	%		Frame
+	%	---------------------------------------------------------- 	page	3
+		\begin{frame} [t,plain]
+		\frametitle{금정불교대학 동문회}
+
+			\begin{block} {금정불교대학}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 46219
+				\item 부산 금정구 남산동 팔송로7번길5 \\ 범불대 총동문회 \\(남산동, 범어사불교대학)
+				\item 부산광역시 금정구 남산동21-1 (범어사불교대학)
+			\end{itemize}
+			\end{block}						
+
+			\begin{block} {창화 서종현}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item
+				\item
+				\item
+			\end{itemize}
+			\end{block}						
+
+
+			\begin{block} {신기열}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 부산시 생활체육회 이사
+				\item 목원개발
+				\item 대영기획
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 보현 명상 산악회
+	%		Frame
+	%	----------------------------------------------------------
+		\section{보현 명상 산악회}
+
+	%	---------------------------------------------------------- page	1
+		\begin{frame} [t,plain]
+		\frametitle{보현 명상 산악회}
+
+			\begin{block} {보현 명상 산악회}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 조회진 보살
+				\item 정성희 보살
+				\item 이수경 보살
+				\item 류상영 법사
+				\item 김영수 명상맨
+				\item 박민 회장
+				\item 
+				\item 이상미
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	----------------------------------------------------------  page		2 	효심사
+		\begin{frame} [t,plain]
+		\frametitle{효심사}
+
+			\begin{block} {효심사}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 효문 스님
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 3 page	불교 문화재 해설사
+		\begin{frame} [t,plain]
+		\frametitle{불교 문화재 해설사}
+
+			\begin{block} {불교 문화재 해설사}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 2 page	대불청
+		\begin{frame} [t,plain]
+		\frametitle{대불청}
+
+			\begin{block} {대불청}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+
+	%	---------------------------------------------------------- 금성고등학교
+	%		Frame
+	%	---------------------------------------------------------- 	page	1
+		\section{금성고등학교}
+		\begin{frame} [t,plain]
+		\frametitle{금성고등학교}
+			\begin{block} {금성고등학교 총동창회 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 	총동창회 회장  \hrulefill 박정태 \\
+						22대,25회	\\
+						010 - 3551 - 3806
+				\item 총동창회 회장  \hrulefill 박경호
+				\item 총동창회 총무 \hrulefill 김광택
+				\item 28기 회장	\hrulefill 	김재환
+				\item 
+
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 금성고등학교 총동창회
+	%		Frame
+	%	---------------------------------------------------------- 	page	2
+%		\section{금성고등학교 총동창회}
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} {금성고등학교 총동창회 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 금산회\hrulefill
+				\item 금성 하모니\hrulefill
+				\item 금남회
+				\item 금진회
+				\item 금우회
+				\item 샛별회
+				\item 연동회
+				\item 동해남부회
+				\item 비단재회
+				\item 세우회
+				\item 장학재단
+
+
+
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 금성고등학교 28회
+	%		Frame
+	%	---------------------------------------------------------- 	page	3
+%		\section{금성고등학교 28회 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} {금성고등학교 28회 - 임원}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 28기 회장	\hrulefill 	김 재환
+				\item 28기 총무	\hrulefill 	김 대희
+			\end{itemize}
+			\end{block}					
+
+			\begin{block} {금성고등학교 28회 - 반대표}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 01반	\hrulefill 	
+				\item 02반	\hrulefill 	
+				\item 03반	\hrulefill 	
+				\item 04반	\hrulefill 	
+				\item 05반	\hrulefill 	
+				\item 06반	\hrulefill 	
+				\item 07반	\hrulefill 	
+				\item 08반	\hrulefill 	
+				\item 09반	\hrulefill 	
+				\item 10반	\hrulefill 	
+			\end{itemize}
+			\end{block}						
+	
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 금성고등학교 28회 3학년4반
+	%		Frame
+	%	---------------------------------------------------------- 	page	3
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} {금성고등학교 28회 - 3학년 4반}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 신인재	\hrulefill 	
+				\item 이승민	\hrulefill 	
+				\item 주보선	\hrulefill 	
+				\item 강은철	\hrulefill 	
+				\item 김대곤	\hrulefill 	
+				\item 김면	\hrulefill 	
+				\item 김태형	\hrulefill 	
+				\item 김현강	\hrulefill 	
+				\item 김현중	\hrulefill 	
+				\item 이상백	\hrulefill 	
+				\item 문중현	\hrulefill 	
+				\item 서윤진	\hrulefill 	
+				\item 양천을	\hrulefill 	
+				\item 오장근	\hrulefill 	
+				\item 조찬래	\hrulefill 	
+				\item 최기환	\hrulefill 	
+				\item 한영만	\hrulefill 	
+			\end{itemize}
+			\end{block}						
+	
+		\end{frame}						
+
+	%	---------------------------------------------------------- 서영엔지니어링
+	%		Frame
+	%	---------------------------------------------------------- 	page	1
+		\section{서영엔지니어링 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} {서영엔지니어링 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 김경갑
+				\item 이재봉 : 와룡법전
+				\item 하수진
+				\item 정경진 전무
+
+
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+	%	---------------------------------------------------------- 택배사 }
+	%		Frame
+	%	---------------------------------------------------------- 	page	3
+		\section{택배사 }
+		\begin{frame} [t,plain]
+		\frametitle{택배사 }
+			\begin{block} {택배사 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 로젠택배 	\hrulefill 1588 - 9988 \\
+						함준호 	\hrulefill 	010 - 3221 - 8874 	
+						\\ 	\hrulefill 	
+						
+				\item CJ대한통운 \hrulefill \\
+						김범한 	\hrulefill	010 - 3114 - 5481 \\
+								\hrulefill 	010 - 7913 - 3694 
+						\\ 	\hrulefill 	
+
+				\item 롯데 택배 	\hrulefill 	1588 - 2121 \\
+						김병홍	\hrulefill	010 - 5607 - 3811 	
+						\\ 	\hrulefill 	
+
+				\item 한진 택배	\hrulefill 
+								\hrulefill 010 - 2579 - 5668	
+						\\ 	\hrulefill 	
+
+				\item 합동 택배	\hrulefill 
+								\hrulefill 
+						\\ 	\hrulefill 	
+
+				\item 우체국		\hrulefill
+						\\ 	\hrulefill 	
+
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+	%	========================================================== 기타
+	%
+	%	---------------------------------------------------------- 1	page
+
+		\part{기타 현황}
+		\frame{\partpage}
+		
+\label{part3} 	%  키타 현황
+
+	%	---------------------------------------------------------- 2	page
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+	%	---------------------------------------------------------- 3	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 4	page
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+	%	---------------------------------------------------------- 계좌번호 }
+	%		Frame
+	%	---------------------------------------------------------- page	1
+		\section{계좌번호 }
+
+		\begin{frame} [t,plain]
+		\frametitle{계좌번호 }
+			\begin{block} {계좌번호 : 식구 }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 	김대희	\hrulefill \\  						카뱅	\hrulefill 3333 - 04 -711 66 92  \\
+																	신한	\hrulefill 371-02-190034 \\
+																	기업은행	\hrulefill 			\\
+																	우체국	\hrulefill 		\\
+									
+
+				\item 	안신영	\hrulefill  \\ 						농협		\hrulefill 821049 52 128362
+				\item 	김재민	\hrulefill \\ 						부산		\hrulefill 10 120 2477 5001
+				\item 	김재경	\hrulefill \\ 						카뱅		\hrulefill 3333 - 16 - 589 42 20
+				\item 	김재홍	\hrulefill \\ 						국민		\hrulefill 9465 - 0101 - 430754
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- page	2
+		\begin{frame} [t,plain]
+			\begin{block} {계좌번호: 업체  }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 	오동재	\hrulefill \\ 						하나				\hrulefill 1869 - 1018 - 556607
+				\item 	최정임 	(머리)	\hrulefill \\  				부산				\hrulefill 082020 - 196 - 765 
+				\item 	장은경 	(식대)	\hrulefill \\ 				경남				\hrulefill 6982 - 10065621
+				\item 	이동인 	(풍물)	\hrulefill \\ 				기업				\hrulefill 0104 - 144 - 1572
+
+				\item 	자운사 청파팀		\hrulefill \\ 				우체국			\hrulefill 601567-01-004343
+
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- page	3
+		\begin{frame} [t,plain]
+		\frametitle{계좌 이체 - 카뱅}
+			\begin{block} {계좌 이체 - 카뱅  }
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 	적금				\hrulefill 5일 \\ 						20,000			\hrulefill
+				\item 	포교사단			\hrulefill CMS \\ 									\hrulefill
+				\item 	자운사 청파팀		\hrulefill 20일 \\ 						20,000			\hrulefill
+				\item 	국경없는 의사회	\hrulefill 20일 CMS \\ 					20,000			\hrulefill
+				\item 	쿠쿠홈시스		\hrulefill 	일 \\ 						9,900			\hrulefill
+				\item 	넷플렉스			\hrulefill 20일 \\ 						14,500			\hrulefill
+
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- page	4
+		\begin{frame} [t,plain]
+		\frametitle{신용카드}
+			\begin{block} {신용카드}
+			\setlength{\leftmargini}{1em}			
+			\begin{itemize}
+				\item 	카드			\hrulefill 롯데 \\ 						
+											4061 5800 0287 4211		\hrulefill \\
+											20일 	\hrulefill \\
+											신한은행 	\hrulefill
+
+				\item 	체크카드		\hrulefill 카카오 \\ 								
+											5365 1002 5975 2307	\hrulefill
+
+				\item 	체크카드		\hrulefill 우체국 \\ 									\hrulefill
+
+				\item 	동구페이		\hrulefill 코나카드 \\ 						
+											9465 4442 0002 4700	\hrulefill
+
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 주요 날짜 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{주요 날짜 }
+
+	%	---------------------------------------------------------- 1		page
+		\begin{frame} [t,plain]
+		\frametitle{주요 날짜 }
+			\begin{block} {주요 날짜 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 월급날 :\hrulefill 30일
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 2 	page
+		\begin{frame} [t,plain]
+			\begin{block} {제사 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item  할아버지 제사 : 
+				\item  아버지 제사 : 5월 7일 
+				\item 장인 제사 : 
+				\item 현찬섭 제사 : 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 3		page
+		\begin{frame} [t,plain]
+			\begin{block} {생일 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item  안신영
+				\item 김재민
+				\item 김재경
+				\item 김재홍
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 4		page
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 영화 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{영화 }
+
+	%	---------------------------------------------------------- 1	page
+		\begin{frame} [t,plain]
+		\frametitle 	{영화}
+
+			\begin{block} {영화 - 한국 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 2	page
+		\begin{frame} [t,plain]
+			\begin{block} {영화 - 영미권}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 3	page
+		\begin{frame} [t,plain]
+			\begin{block} {영화 - 중국}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 4	page
+		\begin{frame} [t,plain]
+			\begin{block} {영화 - 인도}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+%	%	---------------------------------------------------------- 수채화 }
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\section{중앙도서관 수채화 수업}
+%
+%		\begin{frame} [t,plain]
+%		\frametitle{중앙도서관 수채화 수업}
+%			\begin{block} {중앙도서관 수채화 수업}
+%			\setlength{\leftmargini}{2em}			
+%			\begin{itemize}
+%				\item 	이종원
+%				\item 
+%			\end{itemize}
+%			\end{block}						
+%		\end{frame}						
+%
+%
+%		\begin{frame} [t,plain]
+%		\frametitle{중앙도서관 수채화 수업}
+%			\begin{block} {중앙도서관 수채화 수업}
+%			\setlength{\leftmargini}{2em}			
+%			\begin{itemize}
+%				\item 	07/04	
+%				\item 	07/11	
+%				\item 	07/18
+%				\item 	08/01	
+%				\item 	08/08	
+%				\item 	08/1	5
+%				\item 	08/22
+%				\item 	08/29	
+%				\item 	09/05	
+%				\item 	09/12	
+%				\item 	09/19	
+%				\item 	09/26	
+%
+%				\item 
+%			\end{itemize}
+%			\end{block}						
+%		\end{frame}						
+%
+%		\begin{frame} [t,plain]
+%		\frametitle{중앙도서관 수채화 수업}
+%			\begin{block} {중앙도서관 수채화 수업 : 10 월}
+%			\setlength{\leftmargini}{2em}			
+%			\begin{itemize}
+%
+%				\item 	10/03	
+%				\item 	10/10	
+%				\item 	10/17	
+%				\item 	10/24 억새밭 그리기 \hrulefill \\
+%						포교사 수계  결석
+%				\item 	10/28
+%				\item 
+%			\end{itemize}
+%			\end{block}						
+%		\end{frame}						
+%
+%
+%		\begin{frame} [t,plain]
+%		\frametitle{중앙도서관 수채화 수업}
+%			\begin{block} {중앙도서관 수채화 수업 : 11월 }
+%			\setlength{\leftmargini}{2em}			
+%			\begin{itemize}
+%
+%				\item 	11/07	
+%				\item 	11/14	
+%				\item 	11/21	
+%				\item 	11/28	
+%				\item 	12/05	
+%	
+%
+%				\item 
+%			\end{itemize}
+%			\end{block}						
+%		\end{frame}						
+%
+%
+
+	%	---------------------------------------------------------- 하드디스크 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{하드디스크 }
+
+	%	---------------------------------------------------------- 1	page
+		\begin{frame} [t,plain]
+		\frametitle 	{하드디스크}
+		\end{frame}						
+
+	%	---------------------------------------------------------- 2	page
+		\begin{frame} [t,plain]
+			\begin{block} {하드디스크 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 3.5인치 HDD
+				\item 2.5인치 HDD
+				\item 2.5인치 SDD
+				\item USB메모리
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 3		page
+		\begin{frame} [t,plain]
+
+			\begin{block} {하드디스크 3.5인치 HDD }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 1 \hrulefill 
+				\item 2	\hrulefill 
+				\item 3	\hrulefill 
+				\item 4	\hrulefill 
+				\item 5 	\hrulefill 
+				\item 6	\hrulefill 
+				\item 7	\hrulefill 
+				\item 8	\hrulefill 
+				\item 9  \hrulefill 
+				\item 10		\hrulefill 
+				\item 11		\hrulefill 
+				\item 12		\hrulefill 
+
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 4		page
+		\begin{frame} [t,plain]
+
+			\begin{block} {하드디스크 2.5인치 HDD }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 1 작업용 		\hrulefill 사무실
+				\item 2	보고서		\hrulefill  사무실
+				\item 3	메인 백업	\hrulefill 	 사무실 
+				\item 4
+			\end{itemize}
+			\end{block}			
+			
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 5		page
+		\begin{frame} [t,plain]
+
+			\begin{block} {하드디스크 2.5인치 SDD }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 1 
+				\item 2	
+				\item 3	
+				\item 4
+			\end{itemize}
+			\end{block}						
+			
+		\end{frame}						
+
+	%	---------------------------------------------------------- 6		page 	USB 메모리 
+		\begin{frame} [t,plain]
+
+
+			\begin{block}  {USB 메모리 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+
+				\item 들고 다님
+				\item [01]		31.9 GB 중 6.25 GB 사용가능
+				\item [04] 	7.43 GB 작업용 
+				\item [이동용작업] 7.45 GB 중 467 MB 사용가능 \\.
+
+				\item 외장 02케이스에 넣어 2층 책장에
+				\item [02]	
+				\item [03]	14.9 GB 중 5.12 GB 사용가능
+				\item [05]	3.76 GB 음악용 \\.
+
+				\item 2층 벽에 걸어둠
+				\item [우체국] 29.8 GB 중 27.6 GB 사용가능 \\공인인증서용으로 사용
+				\item [설치용] 14.9 GB 중 1.95 GB 사용가능 \\시스템 설치용
+
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 7	page		  설치 프로그램
+		\begin{frame} [t,plain]
+
+			\begin{block}  {설치 프로그램 : 기본 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item [01] 알집
+				\item [01] 카카오톡
+				\item [05] 	오피스
+				\item [05]		아파치
+				\item [05] 	폴라리스
+				\item [05] 	ADOBE
+			\end{itemize}
+			\end{block}						
+
+
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 8	page
+		\begin{frame} [t,plain]
+
+			\begin{block}  {설치 프로그램 : Git }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item [12]	 Git
+				\item [12]	 GitHub
+				\item [12]	 npp
+				\item [16]		소스트리
+				\item [18]		VS Code
+			\end{itemize}
+			\end{block}						
+
+			\begin{block}  {설치 프로그램 : }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item [21] 	Texlive 2020
+				\item [21] 	Autocad
+				\item [21] 	Mathcad
+				\item [21] 	Adobe
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 회원 가입 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{회원 가입 }
+
+	%	---------------------------------------------------------- 	page	1
+		\begin{frame} [t,plain]
+		\frametitle{회원 가입 }
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [t,plain]
+
+			\begin{block} {회원 가입: 전자책 도서관 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 강서 \\
+						h 010 3839 5609 \hrulefill \\
+						h . 789 456 123 \hrulefill \\
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 	page	3
+		\begin{frame} [t,plain]
+
+			\begin{block} {회원 가입 : 오피스 365}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 	김재경 \\
+						173492 @ donga.ac.kr \hrulefill \\
+						Aalice 10308 ! \hrulefill \\
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+
+
+
+	%	---------------------------------------------------------- 클라우드 
+	%		Frame
+	%	----------------------------------------------------------
+		\section{클라우드 }
+
+	%	---------------------------------------------------------- 	page	1
+		\begin{frame} [t,plain]
+		\frametitle{ 클라우드 }
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [t,plain]
+			\begin{block} {클라우드}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item a 개인				\hfill 	15 / 02.0
+				\item b 정산서,프로그램	\hfill 	15 / 03.4
+				\item c 책 스캔			\hfill 	15 /	12.9
+				\item d 성인				\hfill 	15 / 14.6
+				\item e 올재				\hfill 	15 / 00.2
+				\item f 포교사			\hfill 	15 / 00.0
+				\item g 					\hfill 	15 / 00.0
+
+				\item h 메인 작업용 		\hfill 	15 / 14.8
+				\item i 					\hfill 	15 / 00.0
+				\item j 					\hfill 	15 / 00.0
+				\item k 					\hfill 	15 / 00.0
+
+				\item L Latex 			\hfill 	15 / 12.2
+				\item m 여행사진 		\hfill 	15 / 14.7
+				\item n 음악 			\hfill 	15 / 02.2
+				\item o 강좌				\hfill 	15 / 11.6
+				\item p 불교				\hfill 	15 / 00.0
+				\item q 만해아카데미		\hfill 	15 / 05.4 \\ 
+				\hrulefill
+
+				\item naver				\hfill 	15 / 00.2	
+			\end{itemize}
+			\end{block}						
+
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 위생 }
+	%		Frame
+	%	---------------------------------------------------------- 	page	3
+		\section{위생 }
+		\begin{frame} [t,plain]
+		\frametitle{위생 }
+			\begin{block} {위생 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 09-20 이발 
+				\item 10-28 이발 
+				\item 11-21 이발 
+				\item 12-19 이발  쥬댐 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+
+	%	========================================================== 물품 구입
+	%
+	%
+	%
+	%	---------------------------------------------------------- 	page	1
+
+		\part{물품 구입}
+		\frame{\partpage}
+		
+\label{part5} 	%  물품 구입
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+	%	---------------------------------------------------------- 만년필
+	%		Frame
+	%	---------------------------------------------------------- 	page	3
+		\section{만년필}
+
+		\begin{frame} [t,plain]
+		\frametitle{만년필}
+
+			\begin{block} {촉의 구분}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item SEf EF F M B BB OM OB OBB
+			\end{itemize}
+			\end{block}						
+
+
+			\begin{block} {라미}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 삷을 지혜롭게
+				\item 마음을 자비롭게
+				\item 세상을 자유롭게
+			\end{itemize}
+			\end{block}						
+
+			\begin{block} {세일러 레큘레}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 일본의 만년필 제조회사. 파이롯트, 플래티넘과 함께 일본 3대 만년필 제조사로 불린다.
+				\item 마음을 자비롭게
+				\item 세상을 자유롭게
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 만년필 라미
+	%		Frame
+	%	---------------------------------------------------------- 	page	4
+		\section{만년필 : 라미 }
+
+		\begin{frame} [t,plain]
+		\frametitle{만년필 : 라미}
+
+			\begin{block} {라미}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 삷을 지혜롭게
+				\item 마음을 자비롭게
+				\item 세상을 자유롭게
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 만년필 : 세일러
+	%		Frame
+	%	---------------------------------------------------------- 	page	5
+		\section{만년필 : 세일러 }
+
+		\begin{frame} [t,plain]
+		\frametitle{만년필 : 세일러 }
+
+			\begin{block} {세일러 레큘레}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 일본의 만년필 제조회사. 파이롯트, 플래티넘과 함께 일본 3대 만년필 제조사로 불린다.
+				\item 마음을 자비롭게
+				\item 세상을 자유롭게
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 만년필 : 다이소
+	%		Frame
+	%	---------------------------------------------------------- 	page	6
+		\section{만년필 : 다이소 }
+
+		\begin{frame} [t,plain]
+		\frametitle{만년필 : 다이소 }
+
+			\begin{block} {다이소}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 일본의 만년필 제조회사. 파이롯트, 플래티넘과 함께 일본 3대 만년필 제조사로 불린다.
+				\item 마음을 자비롭게
+				\item 세상을 자유롭게
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 만년필 : 모나미
+	%		Frame
+	%	---------------------------------------------------------- 	page	7
+		\section{만년필 : 모나미 }
+
+		\begin{frame} [t,plain]
+		\frametitle{만년필 : 모나미 }
+
+			\begin{block} {모나미}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 일본의 만년필 제조회사. 파이롯트, 플래티넘과 함께 일본 3대 만년필 제조사로 불린다.
+				\item 마음을 자비롭게
+				\item 세상을 자유롭게
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+
+	%	---------------------------------------------------------- 	page	8
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+
+	%	========================================================== 좋은 문구
+	%
+	%
+	%
+	%	---------------------------------------------------------- 	page	1
+
+		\part{좋은 문구}
+		\frame{\partpage}
+		
+\label{part4} 	%  좋은 문구
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+	%	---------------------------------------------------------- 	page	3
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 좋은 문구}
+	%		Frame
+	%	---------------------------------------------------------- 	page	1
+		\section{좋은 문구}
+
+		\begin{frame} [t,plain]
+		\frametitle{좋은 문구}
+			\begin{block} {좋은 문구}
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 삷을 지혜롭게
+				\item 마음을 자비롭게
+				\item 세상을 자유롭게
+
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 	page	2
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 	page	3
+		\begin{frame} [t,plain]
+		\end{frame}						
+	%	---------------------------------------------------------- 	page	4
+		\begin{frame} [t,plain]
+		\end{frame}						
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+
+
+
+
+
+\end{document}
+
+
+	%	---------------------------------------------------------- 	page	1
+		\begin{frame} [t,plain]
+		\end{frame}						
+
