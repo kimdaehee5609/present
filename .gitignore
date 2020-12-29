@@ -1,0 +1,8 @@
+# latex용
+*.aux
+*.nav
+*.out
+*.snm
+*.gz
+*.toc
+*.log
